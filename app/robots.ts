@@ -30,6 +30,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://localhost:3000/sitemap.xml",
+    sitemap: "https://www.lackverket.se/sitemap.xml",
   };
 }
