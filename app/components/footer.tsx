@@ -1,5 +1,6 @@
 
 import Link from "next/link";
+import NumberButton from "./NumberButton";
 
 const Footer = () => {
 
@@ -54,7 +55,7 @@ const Footer = () => {
         <div className="font-sans cursor-pointer">
           <Link href="mailto:info@lackverket.se">info@lackverket.se</Link>
         </div>
-        <div>072-0175620</div>
+        <NumberButton />
         <div>Strandvägen 4, Söderbärke, södra Dalarna</div>
         <div>Telefontid: Mån-Lör, 9-17</div>
       </section>
