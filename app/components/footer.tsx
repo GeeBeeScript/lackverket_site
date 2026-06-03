@@ -1,6 +1,8 @@
+
 import Link from "next/link";
 
 const Footer = () => {
+
   return (
     <footer className="w-full bg-[rgb(232,182,144)] py-2">
       
@@ -24,7 +26,7 @@ const Footer = () => {
         <div className="font-sans text-base">
           <Link href="mailto:info@lackverket.se">info@lackverket.se</Link>
         </div>
-        <div className="text-base">072-0175620</div>
+        <div className="text-base cursor-pointer">072-0175620</div>
         <div className="text-base leading-tight">
           Strandvägen 4,<br />Söderbärke, södra Dalarna
         </div>

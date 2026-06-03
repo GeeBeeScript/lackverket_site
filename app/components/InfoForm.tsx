@@ -103,7 +103,7 @@ export default function InfoForm() {
             height={30}
           />
         </Link>
-
+ 
         <Link href="">
           <Image
             src="/assets/linkedin_svg.svg"

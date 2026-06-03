@@ -8,6 +8,17 @@ import { useState } from "react";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const text = "0720175620";
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      alert("Copied!");
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  };
+
   return (
     <header className="w-full bg-[#b4b4b4] text-[#ebf5f0] overflow-x-hidden">
       {/* ---------------------------------------------------- */}
@@ -201,9 +212,9 @@ const Header = () => {
           "
         >
           <div className="underline underline-offset-2 decoration-2 hover:text-[#ddf7ea] transition-colors duration-200">
-            <Link href="/">info@lackverket.se</Link>
+            <Link href="mailto:info@lackverket.se">info@lackverket.se</Link>
           </div>
-          <div className="text-2xl">0720175620</div>
+          <div onClick={handleCopy} className="text-2xl cursor-pointer">0720175620</div>
         </div>
       </section>
     </header>
