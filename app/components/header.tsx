@@ -62,9 +62,9 @@ const Header = () => {
         {/* CONTACT */}
         <div className="flex flex-col-reverse items-start w-full text-white text-center gap-7 py-8 pl-6 sm:max-lg:py-4 sm:max-lg:flex-row sm:max-lg:justify-center sm:max-lg:gap-25 sm:max-lg:items-center">
           <div className="underline underline-offset-4 decoration-2 font-bold text-2xl">
-            <Link href="/">info@lackverket.se</Link>
+            <Link href="mailto:info@lackverket.se">info@lackverket.se</Link>
           </div>
-          <div className="text-4xl font-bold">0720175620</div>
+          <div onClick={handleCopy} className="text-4xl font-bold cursor-pointer">0720175620</div>
         </div>
 
         {/* ---------------------------------------------------- */}
