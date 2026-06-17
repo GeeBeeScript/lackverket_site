@@ -29,7 +29,7 @@ export default function InfoForm() {
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     if (!formData.email.trim() || !isEmailValid) {
       alert("Vänligen ange en giltig e-postadress.");
