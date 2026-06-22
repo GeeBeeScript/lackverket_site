@@ -214,7 +214,7 @@ const Header = () => {
           <div className="underline underline-offset-2 decoration-2 hover:text-[#ddf7ea] transition-colors duration-200">
             <Link href="mailto:info@lackverket.se">info@lackverket.se</Link>
           </div>
-          <div onClick={handleCopy} className="text-2xl cursor-pointer">0720175620</div>
+          <Link href="tel:0720175620" className="text-2xl cursor-pointer">0720175620</Link>
         </div>
       </section>
     </header>
