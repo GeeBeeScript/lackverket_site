@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
         <NumberButton />
         <div>Strandvägen 4, Söderbärke, södra Dalarna</div>
-        <div>Telefontid: Mån-Lör, 9-17</div>
+        <Link href="tel:0720175620">Telefontid: Mån-Lör, 9-17</Link>
       </section>
 
     </footer>
