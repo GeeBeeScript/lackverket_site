@@ -3,6 +3,71 @@ import Image from "next/image";
 import React from "react";
 import { robotoBold } from "../layout";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Sprutlackering av Köksluckor i Sverige | Lackverket - Måla Köksluckor",
+  description:
+    "Professionell sprutlackering av köksluckor i Sverige. Förnya ditt kök utan att byta stommar - slitstark industrilack, valfri NCS-kulör och perfekt finish. ROT-avdrag gäller. Gratis hämtning i närområdet. Kontakta Lackverket idag!",
+  keywords: [
+    "lackering köksluckor",
+    "lackera om köksluckor",
+    "köksluckor renovering",
+    "lacka om köksluckor",
+    "köksluckor västerås",
+    "lacka köksluckor västerås",
+    "lackera köksluckor pris",
+    "lackera kök",
+    "målning av köksluckor",
+    "lackering av köksluckor",
+    "Lackverket",
+  ],
+  authors: [{ name: "Lackverket" }],
+  creator: "Lackverket",
+  publisher: "Lackverket",
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://www.lackverket.se/fore-och-efter",
+  },
+  openGraph: {
+    title: "Sprutlackering av Köksluckor | Lackverket",
+    description:
+      "Ge ditt kök nytt liv med professionell sprutlackering av köksluckor. Industrilack, valfri NCS-kulör och slitstark finish. ROT-avdrag gäller.",
+    url: "https://www.lackverket.se/fore-och-efter",
+    siteName: "Lackverket",
+    locale: "sv_SE",
+    type: "website",
+    images: [
+      {
+        url: "https://www.lackverket.se/assets/painted_doors.avif",
+        width: 1200,
+        height: 630,
+        alt: "Sprutlackerade köksluckor",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sprutlackering av Köksluckor | Lackverket",
+    description:
+      "Förnya köket genom att sprutlackera köksluckorna. Slitstark industrifärg, valfri kulör och perfekt finish.",
+    images: ["https://www.lackverket.se/assets/painted_doors.avif"],
+  },
+  category: "Köksmålning & Köksrenovering",
+};
+
 const beforeAfterImages = [
   {
     firstRow: {
