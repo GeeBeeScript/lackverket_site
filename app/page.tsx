@@ -81,11 +81,11 @@ export default function Home() {
       {/* 1️⃣ SMALL → MEDIUM UI (mobile/tablet)                */}
       {/* ---------------------------------------------------- */}
       <section className="lg:hidden sm:max-lg:px-5">
-        <p
+        <h1
           className={`${robotoBold.className} text-center font-bold text-[7vw] mb-10`}
         >
           VÄLKOMMEN TILL LACKVERKET!
-        </p>
+        </h1>
 
         {/* --- REUSABLE BLOCK --- */}
         {[
