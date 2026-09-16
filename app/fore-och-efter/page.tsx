@@ -1,6 +1,7 @@
 import { CircleArrowDown, CircleArrowRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import { robotoBold } from "../layout";
 
 const beforeAfterImages = [
   {
@@ -32,11 +33,7 @@ const ForeOchEfter = () => {
     <section className="w-full overflow-x-hidden bg-[#ebf5f0] px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
-        <div className="mx-auto mb-12 max-w-2xl text-center sm:mb-16 lg:mb-20">
-          <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-[0.18em] text-[#4fc489]">
-            Våra projekt
-          </span>
-
+        <div className={`${robotoBold.className} mx-auto mb-12 max-w-2xl text-center sm:mb-16 lg:mb-20`}>
           <h1 className="text-3xl font-semibold tracking-tight text-[#18382b] sm:text-4xl lg:text-5xl">
             Före och efter
           </h1>

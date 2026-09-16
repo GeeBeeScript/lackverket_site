@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -64,7 +63,12 @@ const Header = () => {
           <div className="underline underline-offset-4 decoration-2 font-bold text-2xl">
             <Link href="mailto:info@lackverket.se">info@lackverket.se</Link>
           </div>
-          <div onClick={handleCopy} className="text-4xl font-bold cursor-pointer">0720175620</div>
+          <div
+            onClick={handleCopy}
+            className="text-4xl font-bold cursor-pointer"
+          >
+            0720175620
+          </div>
         </div>
 
         {/* ---------------------------------------------------- */}
@@ -81,7 +85,7 @@ const Header = () => {
               : "opacity-0 scale-95 pointer-events-none"
           }
         `}
-            >
+        >
           {/* CLOSE BUTTON */}
           <button
             onClick={() => setIsMenuOpen(false)}
@@ -108,6 +112,7 @@ const Header = () => {
               href: "/dorrar",
               text: "Lackering Inne- & Ytterdörrar + Fönster",
             },
+            { href: "/fore-och-efter", text: "Före och efter" },
           ].map((item) => (
             <Link
               key={item.text}
@@ -181,6 +186,7 @@ const Header = () => {
                     href: "/dorrar",
                     text: "Lackering Inne- & Ytterdörrar + Fönster",
                   },
+                  { href: "/fore-och-efter", text: "Före och efter" },
                 ].map((item) => (
                   <Link
                     key={item.text}
@@ -214,7 +220,9 @@ const Header = () => {
           <div className="underline underline-offset-2 decoration-2 hover:text-[#ddf7ea] transition-colors duration-200">
             <Link href="mailto:info@lackverket.se">info@lackverket.se</Link>
           </div>
-          <Link href="tel:0720175620" className="text-2xl cursor-pointer">0720175620</Link>
+          <Link href="tel:0720175620" className="text-2xl cursor-pointer">
+            0720175620
+          </Link>
         </div>
       </section>
     </header>
