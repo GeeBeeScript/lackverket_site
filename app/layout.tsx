@@ -7,6 +7,7 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
+import ConsentManager from "./components/consent/ConsentManager";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script id="gtm" strategy="beforeInteractive">
+        {/* <Script id="gtm" strategy="beforeInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -49,7 +50,7 @@ export default function RootLayout({
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-TF7VVBTT');
           `}
-        </Script>
+        </Script> */}
         <link
           href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap"
           rel="stylesheet"
@@ -59,19 +60,20 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         {/* Google Tag Manager (noscript) */}
-        <noscript>
+        {/* <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TF7VVBTT"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
-        </noscript>
+        </noscript> */}
         {/* End Google Tag Manager (noscript) */}
 
         <Header />
         <main className="grow">{children}</main>
         <Footer />
+        <ConsentManager />
         <SpeedInsights />
       </body>
     </html>

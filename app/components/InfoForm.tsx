@@ -86,7 +86,7 @@ export default function InfoForm() {
 
       {/* icon links */}
       <div className="flex justify-start items-center gap-4 wrap-break-word lg:w-full">
-        <Link href="">
+        <Link href="https://www.facebook.com/share/1FDn2QwgJZ/">
           <Image
             src="/assets/facebook_svg.svg"
             alt="facebook logo"
@@ -99,15 +99,6 @@ export default function InfoForm() {
           <Image
             src="/assets/twitter_svg.svg"
             alt="twitter logo"
-            width={30}
-            height={30}
-          />
-        </Link>
- 
-        <Link href="">
-          <Image
-            src="/assets/linkedin_svg.svg"
-            alt="linkedin logo"
             width={30}
             height={30}
           />

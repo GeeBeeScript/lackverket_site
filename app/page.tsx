@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { robotoBold } from "./layout";
 import { Metadata } from "next";
+import InfoForm from "./components/InfoForm";
 
 
 export const metadata:Metadata = {
@@ -162,6 +163,9 @@ export default function Home() {
             className="w-full rounded-lg"
           />
         </div>
+        <div className="w-full sm:w-[80%] sm:mx-auto sm:text-[1.1rem]">
+          <InfoForm />
+        </div>
       </section>
 
       {/* ---------------------------------------------------- */}
@@ -248,7 +252,7 @@ export default function Home() {
           ))}
         </div>
 
-        <p className="pt-17 pb-7 px-4 text-[1.4rem] leading-8 font-bold">
+        <p className="pt-17 pb-7 w-[86vw] mx-auto text-[1.4rem] leading-8 font-bold">
           Vi är sprutlackerare med bakgrund i möbler och interiörer, och med 17
           års erfarenhet av branschen. Kontakta oss så hjälper vi gärna till med
           att hitta bästa lackeringslösningen för dina köksluckor, dörrar och
@@ -259,13 +263,17 @@ export default function Home() {
         </p>
 
         {/* VIDEO (desktop) */}
-        <div className="w-full flex justify-center items-center mt-10 mb-10 relative">
+        <div className="w-[86vw] mx-auto flex justify-center items-center mt-10 mb-10 relative">
           <video
             src="/assets/file.mp4"
             controls
             playsInline
             className="w-full"
           />
+        </div>
+
+        <div className="w-[86vw] sm:mx-auto sm:text-[1.1rem]">
+          <InfoForm />
         </div>
       </section>
     </section>

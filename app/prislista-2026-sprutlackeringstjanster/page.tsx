@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { inter, robotoBold } from "../layout";
 import Script from "next/script";
+import InfoForm from "../components/InfoForm";
 
 export const metadata: Metadata = {
   title:
@@ -235,6 +236,10 @@ const Prislista = () => {
           OMLACKERING AV MÖBLER - SKICKA BILD FÖR OFFERT!
         </p>
         <p className="mb-5">Betalning:</p>
+      </div>
+
+      <div className="w-full sm:w-[80%] sm:mx-auto sm:text-[1.1rem]">
+        <InfoForm />
       </div>
     </section>
   );

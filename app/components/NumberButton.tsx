@@ -13,7 +13,7 @@ const NumberButton = () => {
   };
 
   return (
-    <div onClick={handleCopy} className="cursor-pointer">{"0720175620"}</div>
+    <button onClick={handleCopy} className="block cursor-pointer">{"0720175620"}</button>
   )
 }
 

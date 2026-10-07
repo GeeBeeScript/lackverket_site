@@ -1,6 +1,7 @@
 
 import Link from "next/link";
 import NumberButton from "./NumberButton";
+import CookiePreferencesButton from "./consent/CookiePreferencesButton";
 
 const Footer = () => {
 
@@ -32,6 +33,7 @@ const Footer = () => {
           Strandvägen 4,<br />Söderbärke, södra Dalarna
         </div>
         <div className="text-base">Telefontid: Mån–Lör, 9–17</div>
+        <CookiePreferencesButton className="text-base"/>
       </section>
 
       {/* ---------------------------------------------------- */}
@@ -47,7 +49,7 @@ const Footer = () => {
           items-center 
           justify-between 
           px-32 
-          xl:px-52 
+          xl:px-42 
           text-[1rem] 
           leading-[1.3rem]
         "
@@ -58,6 +60,7 @@ const Footer = () => {
         <NumberButton />
         <div>Strandvägen 4, Söderbärke, södra Dalarna</div>
         <Link href="tel:0720175620">Telefontid: Mån-Lör, 9-17</Link>
+        <CookiePreferencesButton className="text-base"/>
       </section>
 
     </footer>
