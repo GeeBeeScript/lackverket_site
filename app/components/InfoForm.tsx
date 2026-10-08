@@ -28,13 +28,30 @@ export default function InfoForm() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     // e.preventDefault();
 
     if (!formData.email.trim() || !isEmailValid) {
       alert("Vänligen ange en giltig e-postadress.");
       return;
     }
+
+    const content = {
+      firstName: formData.firstName,
+      additionalName: formData.additionalName,
+      emailAddress: formData.email,
+      message: formData.message
+    }
+
+    const response = await fetch('/api/send', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(content)
+    })
+
+    const data = await response.json()
 
     const subject = encodeURIComponent(
       "Förfrågan om sprutlackering – Lackverket"
@@ -64,7 +81,11 @@ export default function InfoForm() {
   };
 
   return (
-    <form
+   <>
+     <form
+      method="POST"
+      action="about:blank"
+      target="form-sink"
       onSubmit={handleSubmit}
       className="
         flex flex-col gap-6 
@@ -203,5 +224,7 @@ export default function InfoForm() {
         Submit
       </button>
     </form>
+    <iframe name="form-sink" title="form-sink" hidden />
+   </>
   );
 }

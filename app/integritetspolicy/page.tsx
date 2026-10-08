@@ -13,8 +13,6 @@ const LAST_UPDATED = "07/10/2026";
 const FORM_FIELDS = "Första namn, Tilltals namn, E-post, ditt meddelande";
 // How long you keep form submissions.
 const RETENTION_PERIOD = "Ännu ej fastställt";
-// Where the site is hosted and where form submissions are stored.
-const HOSTING_PROVIDER = "simply.com";
 
 const ACCEPT_LABEL = "Accept";
 const REJECT_LABEL = "Reject";
@@ -22,7 +20,7 @@ const REJECT_LABEL = "Reject";
 export const metadata = {
   title: "integritetspolicy",
   description:
-    "How we collect, use and protect your personal data, and how we use cookies.",
+    "Hur vi samlar in, använder och skyddar dina personuppgifter samt hur vi använder cookies.",
 };
 
 function Section({
