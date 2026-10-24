@@ -18,7 +18,6 @@ type Project = {
   after: string[];
 };
 
-// TIP: Replace the titles with real details (e.g. kulör, ort, typ av kök)
 const projects: Project[] = [
   {
     title: "Sprutmålade köksluckor – kök 1",
