@@ -73,7 +73,7 @@ export default function RootLayout({
         <Header />
         <main className="grow">{children}</main>
         <Footer />
-        <ConsentManager />
+        {/* <ConsentManager /> */}
         <SpeedInsights />
       </body>
     </html>
