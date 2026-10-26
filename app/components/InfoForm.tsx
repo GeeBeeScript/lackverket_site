@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 
 export default function InfoForm() {
@@ -13,6 +14,9 @@ export default function InfoForm() {
   });
 
   const [isEmailValid, setIsEmailValid] = useState<boolean>(true); // Track email validity
+
+  // Url search parameters
+  const searchParams = useSearchParams()
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -36,11 +40,24 @@ export default function InfoForm() {
       return;
     }
 
+    const utmSource = searchParams.get('utm_source') ?? "no value"
+    const utmMedium = searchParams.get('utm_medium') ?? "no value"
+    const utmCampaign = searchParams.get('utm_campaign') ?? "no value"
+    const utmTerm = searchParams.get('utm_term') ?? "no value"
+    const utmContent = searchParams.get('utm_content') ?? "no value"
+
     const content = {
       firstName: formData.firstName,
       additionalName: formData.additionalName,
       emailAddress: formData.email,
-      message: formData.message
+      message: formData.message,
+      utmData: {
+        utmSource,
+        utmMedium,
+        utmCampaign,
+        utmTerm,
+        utmContent
+      }
     }
 
     const response = await fetch('/api/send', {

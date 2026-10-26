@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    const { firstName, additionalName, emailAddress, message } = body;
+    const { firstName, additionalName, emailAddress, message, utmData } = body;
 
     if (!(firstName && additionalName && emailAddress)) {
       return NextResponse.json(
@@ -31,6 +31,7 @@ export async function POST(request: NextRequest) {
           additionalName={additionalName}
           emailAddress={emailAddress}
           message={message}
+          utmData={utmData}
         />
       ),
     });

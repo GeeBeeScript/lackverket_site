@@ -1,25 +1,37 @@
-import * as React from 'react';
-import { 
-  Html, 
-  Body, 
-  Container, 
-  Section, 
-  Heading, 
-  Text, 
-  Button, 
-  Hr, 
-  Tailwind 
-} from '@react-email/components';
-
+import * as React from "react";
+import {
+  Html,
+  Body,
+  Container,
+  Section,
+  Heading,
+  Text,
+  Button,
+  Hr,
+  Tailwind,
+} from "@react-email/components";
 
 interface EmailTemplateProps {
   firstName: string;
   additionalName: string;
   emailAddress: string;
   message: string;
+  utmData: {
+    utmSource: string;
+    utmMedium: string;
+    utmCampaign: string;
+    utmTerm: string;
+    utmContent: string;
+  };
 }
 
-export default function EmailTemplate({ firstName, additionalName, emailAddress, message }: EmailTemplateProps) {
+export default function EmailTemplate({
+  firstName,
+  additionalName,
+  emailAddress,
+  message,
+  utmData,
+}: EmailTemplateProps) {
   return (
     <Html lang="en">
       <Tailwind>
@@ -29,40 +41,52 @@ export default function EmailTemplate({ firstName, additionalName, emailAddress,
               Lackverket form was submitted
             </Heading>
 
-            <Section className='text-start my-6'>
+            <Section className="text-start my-6">
               <Text className="text-slate-600 text-[14px] leading-6">
                 First-name: <strong>{firstName}</strong>
-            </Text>
-            <Text className="text-slate-600 text-[14px] leading-6">
+              </Text>
+              <Text className="text-slate-600 text-[14px] leading-6">
                 Last-name: <strong>{additionalName}</strong>
-            </Text>
-            <Text className="text-slate-600 text-[14px] leading-6">
+              </Text>
+              <Text className="text-slate-600 text-[14px] leading-6">
                 E-mail: <strong>{emailAddress}</strong>
-            </Text>
-            <Text className="text-slate-600 text-[14px] leading-6">
+              </Text>
+              <Text className="text-slate-600 text-[14px] leading-6">
                 Message: <strong>{message}</strong>
-            </Text>
+              </Text>
             </Section>
-            
 
             {/* Instead of a raw <div> container, use <Section> */}
             <Section className="text-center mt-8 mb-8">
               <Button
                 className="bg-indigo-600 rounded text-white text-[12px] font-semibold no-underline text-center px-5 py-3"
-                href={ `mailto:${emailAddress}` }
+                href={`mailto:${emailAddress}`}
               >
                 Send client an e-mail
               </Button>
             </Section>
 
             <Hr className="border border-solid border-slate-200 my-[26px]" />
-            
+            <Section className="text-start my-6">
+              <Text className="text-slate-600 text-[12px] leading-6 mb-3">
+                <strong>
+                  This section is for manual Google ads conversion tracking
+                </strong>
+              </Text>
+              <Text className="text-slate-600 text-[10px] leading-5">
+                source: {utmData.utmSource}, medium: {utmData.utmMedium}, campaign: {utmData.utmCampaign}, term: {utmData.utmTerm}, content: {utmData.utmContent}
+              </Text>
+            </Section>
+
+            <Hr className="border border-solid border-slate-200 my-[26px]" />
+
             <Text className="text-slate-400 text-[12px] leading-6 px-5">
-              This template was created by GB. It automatically sends a mail when a potential client submits the form on www.lackverket.se
+              This template was created by GB. It automatically sends a mail
+              when a potential client submits the form on www.lackverket.se
             </Text>
           </Container>
         </Body>
       </Tailwind>
     </Html>
-  )
+  );
 }
