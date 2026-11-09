@@ -40,8 +40,7 @@ const BeforeAfterSection = () => {
         </h1>
 
         <p className="mt-5 text-base leading-7 text-[#496257] sm:text-lg">
-          Vi sprutmålade luckorna och målade resterande delar på plats hemma hos
-          kunden.
+          Före- och efterbilder från ett nyligen utfört arbete.
         </p>
       </div>
 
