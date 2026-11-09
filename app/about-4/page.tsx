@@ -1,6 +1,7 @@
 import Image from "next/image";
 import InfoForm from "../components/InfoForm";
 import { Metadata } from "next";
+import BeforeAfterSection from "./BeforeAfterSection";
 
 export const metadata: Metadata = {
   title:
@@ -99,7 +100,7 @@ const About4 = () => {
         </p>
       </div>
 
-      <div className="px-0 sm:px-5 py-5 flex flex-col gap-1 sm:gap-5 sm:w-[70%] sm:mx-auto">
+      <div className="px-3 sm:px-5 py-5 flex flex-col gap-1 sm:gap-5 sm:w-[70%] sm:mx-auto">
         <p className="font-bold text-[1.8rem] sm:text-[1.4rem] sm:leading-[2.4rem]">
           <span>Telefon:</span> <span>072-017 56 20 </span>
         </p>
@@ -111,6 +112,19 @@ const About4 = () => {
       <div className="px-5 pt-0 pb-10 text-[1.35rem] leading-[2.6rem] text-[#111] sm:gap-5 sm:w-[70%] sm:mx-auto sm:text-[1.1rem] sm:leading-[2.4rem]">
         Det går även bra att anlita oss att måla resterande kök! Skicka en bild
         för offert! Då gäller <span className="font-bold">ROT-avdraget!</span>
+      </div>
+
+      <div className="px-5 pt-0 pb-10 text-[1.35rem] leading-[2.6rem] text-[#111] sm:gap-5 sm:w-[70%] sm:mx-auto sm:text-[1.1rem] sm:leading-[2.4rem]">
+        <video
+          src="/assets/file.mp4"
+          controls
+          playsInline
+          className="w-full rounded-lg"
+        />
+      </div>
+
+      <div className="px-5 pt-0 pb-10 text-[1.35rem] leading-[2.6rem] text-[#111] sm:gap-5 sm:w-[70%] sm:mx-auto sm:text-[1.1rem] sm:leading-[2.4rem]">
+        <BeforeAfterSection />
       </div>
 
       <div className="w-full mb-15 sm:w-[70%] sm:mx-auto sm:text-[1.1rem]">

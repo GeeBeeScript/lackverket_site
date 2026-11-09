@@ -124,6 +124,7 @@ const Header = () => {
           hover:scale-105
           underline underline-offset-8 decoration-2 truncate
           max-sm:w-[20ch] 
+          py-3
         "
             >
               {item.text}

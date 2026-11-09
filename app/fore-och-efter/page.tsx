@@ -18,7 +18,7 @@ type Project = {
   after: string[];
 };
 
-const projects: Project[] = [
+export const projects: Project[] = [
   {
     title: "Sprutmålade köksluckor – kök 1",
     before: [
